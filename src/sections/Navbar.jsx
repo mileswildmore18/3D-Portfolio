@@ -1,5 +1,17 @@
 
+import { useState } from "react";
+
+const NavItems = () => {
+    return (
+        <div></div>
+    )
+}
 const Navbar = () => {
+    // Toggle Menu effect
+    const [isOpen, setIsOpen] = useState(true);
+
+    // Function to toggle the menu
+    const toggleMenu = () => setIsOpen((prevIsOpen) => (!prevIsOpen));
     return (
         <header className="fixed-top-0 left-0 right-0 z-50 bg-black/90">
             <div className="max-w-7xl mx-auto">
@@ -9,9 +21,15 @@ const Navbar = () => {
                         Miles Wildmore
                     </a>
                     {/* Toggle Button */}
-                    <button>
-                        <img src={"assets/menu.svg"} alt="toggle" className="w-6 h-6" />
+                    <button onClick={toggleMenu} className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex" aria-label="Toggle menu">
+                        {/* Determine the state of the button if it is open or closed */}
+                        <img src={ isOpen ? "assets/close.svg" : "assets/menu.svg"} alt="toggle" className="w-6 h-6" />
                     </button>
+                    {/* Nav links */}
+                    <nav className="sm:flex hidden">
+                        {/* Nav items and links */}
+                        <NavItems />
+                    </nav>
                 </div>
             </div>
         </header>
