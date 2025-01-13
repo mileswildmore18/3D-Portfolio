@@ -15,7 +15,7 @@ const NavItems = () => {
 }
 const Navbar = () => {
     // Toggle Menu effect
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     // Function to toggle the menu
     const toggleMenu = () => setIsOpen((prevIsOpen) => (!prevIsOpen));
@@ -38,6 +38,13 @@ const Navbar = () => {
                         <NavItems />
                     </nav>
                 </div>
+            </div>
+            {/* Show only on Mobile for Menu bar  */}
+            <div className={`nav-sidebar ${isOpen ? "max-h-screen" : "max-h-0"}`}>
+                {/* Display nav items in mobile view */}
+                <nav className='p-5'>
+                    <NavItems />
+                </nav>
             </div>
         </header>
     )
