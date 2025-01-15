@@ -23,8 +23,12 @@ const Hero = () => {
 
                    {/* Add camera*/}
                    <PerspectiveCamera makeDefault position={[0, 0, 30]}/>
-
-                   <HackerRoom />
+                   {/* Add model */}
+                   <HackerRoom scale={0.05} position={[0, 0, 0]} rotation={[0, 280, 0]} />
+                       {/* Add lights*/}
+                       <ambientLight intensity={1} />
+                       {/* Add directional light of the model*/}
+                       <directionalLight position={[10, 10, 10]} intensity={0.5}/>
                    </Suspense>
                </Canvas>
             </div>
