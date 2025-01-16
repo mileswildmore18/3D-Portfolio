@@ -1,6 +1,7 @@
 import {useGLTF, useTexture} from '@react-three/drei';
 
 const HackerRoom = (props) => {
+    // Add model
     const {nodes, materials} = useGLTF('/models/hacker-room.glb');
 
     const monitorTxt = useTexture('textures/desk/monitor.png');

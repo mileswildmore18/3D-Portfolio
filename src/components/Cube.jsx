@@ -3,12 +3,12 @@
 */
 
 import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { useRef, useState } from 'react';
-import { Float, useGLTF, useTexture } from '@react-three/drei';
+import {useGSAP} from '@gsap/react';
+import {useRef, useState} from 'react';
+import {Float, useGLTF, useTexture} from '@react-three/drei';
 
-const Cube = ({ ...props }) => {
-    const { nodes } = useGLTF('models/cube.glb');
+const Cube = ({...props}) => {
+    const {nodes} = useGLTF('models/cube.glb');
 
     const texture = useTexture('textures/cube.png');
 
@@ -41,7 +41,7 @@ const Cube = ({ ...props }) => {
                     geometry={nodes.Cube.geometry}
                     material={nodes.Cube.material}
                     onPointerEnter={() => setHovered(true)}>
-                    <meshMatcapMaterial matcap={texture} toneMapped={false} />
+                    <meshMatcapMaterial matcap={texture} toneMapped={false}/>
                 </mesh>
             </group>
         </Float>

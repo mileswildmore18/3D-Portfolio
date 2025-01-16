@@ -1,14 +1,15 @@
+import {useState} from "react";
+import {navLinks} from "../constants/index.js";
 
-import { useState } from "react";
-import { navLinks } from "../constants/index.js";
 const NavItems = () => {
     return (
         // Make Navbar reusable
         <ul className="nav-ul">
             {navLinks.map(({id, href, name}) => (
-                 <li key={id} className="nav-li">
-                    <a href={href} className="nav-li_a" onClick={() => {}}>{name}</a>
-                 </li>
+                <li key={id} className="nav-li">
+                    <a href={href} className="nav-li_a" onClick={() => {
+                    }}>{name}</a>
+                </li>
             ))}
         </ul>
     )
@@ -28,14 +29,16 @@ const Navbar = () => {
                         Miles Wildmore
                     </a>
                     {/* Toggle Button */}
-                    <button onClick={toggleMenu} className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex" aria-label="Toggle menu">
+                    <button onClick={toggleMenu}
+                            className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
+                            aria-label="Toggle menu">
                         {/* Determine the state of the button if it is open or closed */}
-                        <img src={ isOpen ? "assets/close.svg" : "assets/menu.svg"} alt="toggle" className="w-6 h-6" />
+                        <img src={isOpen ? "assets/close.svg" : "assets/menu.svg"} alt="toggle" className="w-6 h-6"/>
                     </button>
                     {/* Nav links */}
                     <nav className="sm:flex hidden">
                         {/* Nav items and links */}
-                        <NavItems />
+                        <NavItems/>
                     </nav>
                 </div>
             </div>
@@ -43,7 +46,7 @@ const Navbar = () => {
             <div className={`nav-sidebar ${isOpen ? "max-h-screen" : "max-h-0"}`}>
                 {/* Display nav items in mobile view */}
                 <nav className='p-5'>
-                    <NavItems />
+                    <NavItems/>
                 </nav>
             </div>
         </header>

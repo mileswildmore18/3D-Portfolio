@@ -34,8 +34,6 @@ const Hero = () => {
                 <p className="hero_tag text-gray_gradient">Building Products and Brands</p>
             </div>
             <div className="w-full h-full absolute inset-0">
-                {/* Add leva*/}
-                {/*<Leva/>*/}
                 {/* Add canvas with camera actions*/}
                 <Canvas className="w-full h-full absolute inset-0">
                     {/* Add canvas loader*/}
@@ -55,12 +53,12 @@ const Hero = () => {
                         </HeroCamera>
 
 
-                            <group>
-                                <Target position={sizes.targetPosition}/>
-                                <ReactLogo position={sizes.reactLogoPosition}/>
-                                <Cube position={sizes.cubePosition}/>
-                                <Rings position={sizes.ringPosition}/>
-                            </group>
+                        <group>
+                            <Target position={sizes.targetPosition}/>
+                            <ReactLogo position={sizes.reactLogoPosition}/>
+                            <Cube position={sizes.cubePosition}/>
+                            <Rings position={sizes.ringPosition}/>
+                        </group>
                         {/* Add lights*/}
                         <ambientLight intensity={1}/>
                         {/* Add directional light of the model*/}

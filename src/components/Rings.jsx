@@ -3,6 +3,7 @@ import { Center, useTexture } from '@react-three/drei';
 import gsap from 'gsap';
 import { useCallback, useRef } from 'react';
 
+// Add rings
 const Rings = ({ position }) => {
     const refList = useRef([]);
     const getRef = useCallback((mesh) => {
@@ -16,16 +17,17 @@ const Rings = ({ position }) => {
     useGSAP(
         () => {
             if (refList.current.length === 0) return;
-
+            // Add position
             refList.current.forEach((r) => {
                 r.position.set(position[0], position[1], position[2]);
             });
-
+            // Add animation
             gsap
                 .timeline({
                     repeat: -1,
                     repeatDelay: 0.5,
                 })
+
                 .to(
                     refList.current.map((r) => r.rotation),
                     {
