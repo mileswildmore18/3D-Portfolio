@@ -21,7 +21,7 @@ const Target = (props) => {
     })
     return (
         // Add mesh and ref rotated to the center
-        <mesh {...props} ref={targetRef} rotation={[0, Math.PI / 5, 0]}
+        <mesh {...props} ref={targetRef} rotation={[0, Math.PI / 5, 0]} scale={1.5}
         >
             {/* Add model*/}
             <primitive object={scene} />
