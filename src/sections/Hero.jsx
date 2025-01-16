@@ -6,6 +6,7 @@ import {Suspense} from "react";
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import {useMediaQuery} from "react-responsive";
 import {calculateSizes} from "../constants/index.js";
+import Target from "../components/Target.jsx";
 
 // Add hero section
 const Hero = () => {
@@ -44,6 +45,9 @@ const Hero = () => {
                             rotation={[0, -Math.PI, 0]}
                             scale={sizes.deskScale}/>
 
+                            <group>
+                                <Target position={sizes.targetPosition}/>
+                            </group>
                         {/* Add lights*/}
                         <ambientLight intensity={1}/>
                         {/* Add directional light of the model*/}
