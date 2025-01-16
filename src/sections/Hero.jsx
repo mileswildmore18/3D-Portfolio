@@ -6,12 +6,44 @@ import {Suspense} from "react";
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import {Leva, useControls} from "leva";
 
+// Add hero section
 const Hero = () => {
     const x = useControls('HackerRoom', {
-        rotationX: {
+        // Add Leva controls
+        positionX: {
             value: 2.5,
             min: -10,
-            max: 10,
+            max: 10
+        },
+        positionY: {
+            value: 2.5,
+            min: -10,
+            max: 10
+        },
+        positionZ: {
+            value: 2.5,
+            min: -10,
+            max: 10
+        },
+        rotationX: {
+            value: 0,
+            min: -10,
+            max: 10
+        },
+        rotationY: {
+            value: 0,
+            min: -10,
+            max: 10
+        },
+        rotationZ: {
+            value: 0,
+            min: -10,
+            max: 10
+        },
+        scale: {
+            value: 1,
+            min: 0.1,
+            max: 10
         }
     })
     return (
@@ -24,6 +56,8 @@ const Hero = () => {
                 <p className="hero_tag text-gray_gradient">Building Products and Brands</p>
             </div>
             <div className="w-full h-full absolute inset-0">
+                {/* Add leva*/}
+                <Leva/>
                 {/* Add canvas with camera actions*/}
                 <Canvas className="w-full h-full absolute inset-0">
                     {/* Add canvas loader*/}
@@ -34,10 +68,12 @@ const Hero = () => {
                         <PerspectiveCamera makeDefault position={[0, 0, 30]}/>
                         {/* Add model */}
                         <HackerRoom //scale={0.07}
-                                    position={[0, 0, 0]}
-                                    rotation={[0, 280, 0]}
-                        scale={[x.positionX, x.positionY, x.positionZ]}/>
-                        <Leva/>
+                            //position={[0, 0, 0]}
+                            //rotation={[0, 280, 0]}
+                            position={[x.positionX, x.positionY, x.positionZ]}
+                            rotation={[x.rotationX, x.rotationY, x.rotationZ]}
+                            scale={[x.scale, x.scale, x.scale]}/>
+
                         {/* Add lights*/}
                         <ambientLight intensity={1}/>
                         {/* Add directional light of the model*/}
