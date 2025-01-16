@@ -10,6 +10,7 @@ import Target from "../components/Target.jsx";
 import ReactLogo from "../components/ReactLogo.jsx";
 import Cube from "../components/Cube.jsx";
 import Rings from "../components/Rings.jsx";
+import HeroCamera from "../components/HeroCamera.jsx";
 
 // Add hero section
 const Hero = () => {
@@ -41,12 +42,16 @@ const Hero = () => {
 
                         {/* Add camera*/}
                         <PerspectiveCamera makeDefault position={[0, 0, 20]}/>
-                        {/* Add model */}
-                        <HackerRoom
-                            /* Add position, rotation and scale along with scale fitting on different screen sizes*/
-                            position={sizes.deskPosition}
-                            rotation={[0, -Math.PI, 0]}
-                            scale={sizes.deskScale}/>
+                        {/* Add camera movement to model*/}
+                        <HeroCamera isMobile={isMobile}>
+                            {/* Add model */}
+                            <HackerRoom
+                                /* Add position, rotation and scale along with scale fitting on different screen sizes*/
+                                position={sizes.deskPosition}
+                                rotation={[0, -Math.PI, 0]}
+                                scale={sizes.deskScale}/>
+                        </HeroCamera>
+
 
                             <group>
                                 <Target position={sizes.targetPosition}/>
