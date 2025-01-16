@@ -4,48 +4,19 @@ import {Canvas} from "@react-three/fiber";
 import HackerRoom from "../components/HackerRoom.jsx";
 import {Suspense} from "react";
 import CanvasLoader from "../components/CanvasLoader.jsx";
-import {Leva, useControls} from "leva";
+import {useMediaQuery} from "react-responsive";
+import {calculateSizes} from "../constants/index.js";
 
 // Add hero section
 const Hero = () => {
-    const x = useControls('HackerRoom', {
-        // Add Leva controls
-        positionX: {
-            value: 2.5,
-            min: -10,
-            max: 10
-        },
-        positionY: {
-            value: 2.5,
-            min: -10,
-            max: 10
-        },
-        positionZ: {
-            value: 2.5,
-            min: -10,
-            max: 10
-        },
-        rotationX: {
-            value: 0,
-            min: -10,
-            max: 10
-        },
-        rotationY: {
-            value: 0,
-            min: -10,
-            max: 10
-        },
-        rotationZ: {
-            value: 0,
-            min: -10,
-            max: 10
-        },
-        scale: {
-            value: 1,
-            min: 0.1,
-            max: 10
-        }
-    })
+
+    // Add media queries for different screen sizes
+    const isSmall = useMediaQuery({maxWidth: 440})
+    const isMobile = useMediaQuery({maxWidth: 768})
+    const isTablet = useMediaQuery({minWidth: 768, maxWidth: 1024})
+
+    // Add hero sizes for different screen sizes
+    const sizes = calculateSizes(isSmall, isMobile, isTablet)
     return (
         // Add hero section with blue border
         <section className="min-h-screen border-2 border-blue-500 w-full flex flex-col relative">Hero
@@ -57,7 +28,7 @@ const Hero = () => {
             </div>
             <div className="w-full h-full absolute inset-0">
                 {/* Add leva*/}
-                <Leva/>
+                {/*<Leva/>*/}
                 {/* Add canvas with camera actions*/}
                 <Canvas className="w-full h-full absolute inset-0">
                     {/* Add canvas loader*/}
@@ -65,14 +36,13 @@ const Hero = () => {
 
 
                         {/* Add camera*/}
-                        <PerspectiveCamera makeDefault position={[0, 0, 30]}/>
+                        <PerspectiveCamera makeDefault position={[0, 0, 20]}/>
                         {/* Add model */}
-                        <HackerRoom //scale={0.07}
-                            //position={[0, 0, 0]}
-                            //rotation={[0, 280, 0]}
-                            position={[x.positionX, x.positionY, x.positionZ]}
-                            rotation={[x.rotationX, x.rotationY, x.rotationZ]}
-                            scale={[x.scale, x.scale, x.scale]}/>
+                        <HackerRoom
+                            /* Add position, rotation and scale along with scale fitting on different screen sizes*/
+                            position={sizes.deskPosition}
+                            rotation={[0, -Math.PI, 0]}
+                            scale={sizes.deskScale}/>
 
                         {/* Add lights*/}
                         <ambientLight intensity={1}/>

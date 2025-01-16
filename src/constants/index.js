@@ -231,8 +231,10 @@ export const myProjects = [
     },
 ];
 
+// Calculate sizes of the 3D objects
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
     return {
+        // Add sizes
         deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
         deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
         cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
