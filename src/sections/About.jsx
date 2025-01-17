@@ -1,5 +1,5 @@
 import Globe from "react-globe.gl";
-
+import Button from "../components/Button.jsx";
 const About = () => {
     return (
         // Add about section responsive on different screen sizes
@@ -22,10 +22,11 @@ const About = () => {
                 {/* Add information about my skills*/}
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
-    <img src="/assets/grid2.png" alt="grid-2" className="w-full sm:w-[276px] h-fit object-contain"/>
+                        <img src="/assets/grid2.png" alt="grid-2" className="w-full sm:w-[276px] h-fit object-contain"/>
                         <div>
                             <p className="grid-headtext">Tech Stack</p>
-                            <p className="grid-subtext">I specialize in HTML, CSS with Tailwind/Bootstrap, and JavaScript with a focus on React and Next.js.</p>
+                            <p className="grid-subtext">I specialize in HTML, CSS with Tailwind/Bootstrap, and
+                                JavaScript with a focus on React and Next.js.</p>
                         </div>
                     </div>
                 </div>
@@ -35,17 +36,22 @@ const About = () => {
                         <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
                             {/* Add globe*/}
                             <Globe
-                            height={326}
-                            width={326}
-                            backgroundColor="rgba(0, 0, 0, 0)"
-                            backgroundImageOpacity={0.5}
-                            showAtmosphere
-                            showGraticules
-                            globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
-                            bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
+                                height={326}
+                                width={326}
+                                backgroundColor="rgba(0, 0, 0, 0)"
+                                backgroundImageOpacity={0.5}
+                                showAtmosphere
+                                showGraticules
+                                globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
+                                bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
                             />
                         </div>
-
+                        <div>
+                            <p className="grid-headtext">I work remotely across most timezones</p>
+                            <p className="grid-subtext">I am based in the United States, with remote work available.</p>
+                            <Button name="Contact Me" isBeam containerClass="w-full mt-10"
+                             />
+                        </div>
                     </div>
                 </div>
             </div>
