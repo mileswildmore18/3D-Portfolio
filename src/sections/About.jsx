@@ -18,7 +18,7 @@ const About = () => {
     }
     return (
         // Add about section responsive on different screen sizes
-        <section className="c-space my-20">
+        <section className="c-space my-20" id="about">
             {/* Start of information about me*/}
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="col-span-1 xl:row-span-3">
@@ -105,7 +105,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            {/* End of information about my contact*/}
+                {/* End of information about my contact*/}
             </div>
         </section>
     )
