@@ -41,6 +41,7 @@ export const clientReviews = [
     }
 ];
 
+// Add projects
 export const myProjects = [
     {
         title: 'Apple',
@@ -80,11 +81,9 @@ export const myProjects = [
         ],
     },
     {
-        title: 'LiveDoc - Real-Time Google Docs Clone',
-        desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
-        subdesc:
-            'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-        href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
+        title: 'Brainwave',
+        desc: 'This is a website where you can explore the possibilities of AI Chatting as well as seeing some amazing animation of the website.',
+        href: 'https://milesbrainwave.netlify.app/',
         texture: '/textures/project/project2.mp4',
         logo: '/assets/project-logo2.png',
         logoStyle: {
