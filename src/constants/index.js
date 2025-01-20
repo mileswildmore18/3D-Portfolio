@@ -46,8 +46,6 @@ export const myProjects = [
     {
         title: 'Apple',
         desc: 'This is the Apple website showing the features of an Apple iPhone and new products out',
-        subdesc:
-            'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
         href: 'https://animationmiles.netlify.app/',
         texture: '/textures/project/project1.mp4',
         logo: '/assets/project-logo1.png',
