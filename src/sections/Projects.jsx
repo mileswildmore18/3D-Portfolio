@@ -1,7 +1,7 @@
 import {myProjects} from "../constants/index.js";
 import {Suspense, useState} from "react";
 import {Canvas} from "@react-three/fiber";
-import {Center} from "@react-three/drei";
+import {Center, OrbitControls} from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import DemoComputer from "../components/DemoComputer.jsx";
 
@@ -76,16 +76,23 @@ const Projects = () => {
                 </div>
 
                 <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
+                    {/* Add canvas of the computer*/}
                     <Canvas>
-                        <ambientLight intensity={1} />
+                        {/* Add lights*/}
+                        <ambientLight intensity={Math.PI} />
                         <directionalLight position={[10, 10, 5]} />
+                        {/* Add computer*/}
                         <Center>
                             <Suspense fallback={<CanvasLoader />}>
                                 <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
-                                <DemoComputer />
+                                {/* Add Demo Computer react file*/}
+                                {/*    Add videos in the computer screen 3d model */}
+                                <DemoComputer texture={currentProject.texture}/>
                                 </group>
                         </Suspense>
                         </Center>
+                        {/* Add orbit controls to move the computer*/}
+                        <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
                     </Canvas>
                 </div>
             </div>

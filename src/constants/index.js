@@ -48,7 +48,7 @@ export const myProjects = [
         desc: 'This is the Apple website showing the features of an Apple iPhone and new products out.',
         subdesc: 'Built with React, Tailwind, Next.js and Framer Motion',
         href: 'https://animationmiles.netlify.app/',
-        texture: '/textures/project/project1.mp4',
+        texture: '/textures/project/smallHero.mp4',
         logo: '/assets/apple.png',
         logoStyle: {
             backgroundColor: '#2A1816',
@@ -84,7 +84,7 @@ export const myProjects = [
         desc: 'This is a website where you can explore the possibilities of AI Chatting as well as seeing some amazing animation of the website.',
         subdesc: 'Built with React, Tailwind, Next.js and Framer Motion.',
         href: 'https://milesbrainwave.netlify.app/',
-        texture: '/textures/project/project2.mp4',
+        texture: '/textures/project/frame.mp4',
         logo: '/assets/ai.png',
         logoStyle: {
             backgroundColor: '#13202F',
