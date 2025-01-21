@@ -2,7 +2,7 @@ import {myProjects} from "../constants/index.js";
 import {useState} from "react";
 
 // Add amount of projects and current project
-const projectCount = myProjects.length
+const projectCount = myProjects.length;
 const Projects = () => {
     // Add selected project
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0)
@@ -12,10 +12,10 @@ const Projects = () => {
     // Add navigation arrows to move between projects
     const handleNavigation = (direction) => {
         setSelectedProjectIndex((prevIndex) => {
-            if(direction === 'previous') {
+            if (direction === 'previous') {
                 return prevIndex === 0 ? projectCount - 1 : prevIndex - 1;
             } else {
-                return prevIndex === projectCount -1 ? 0 : prevIndex + 1;
+                return prevIndex === projectCount - 1 ? 0 : prevIndex + 1;
             }
         })
     }
@@ -40,22 +40,24 @@ const Projects = () => {
                     <div className="flex flex-col gap-5 text-white-600 my-5">
                         <p className="text-white text-2xl font-semibold animatedText">{currentProject.title}</p>
                         <p className="animatedText">{currentProject.desc}</p>
+                        <p className="animatedText">{currentProject.subdesc} </p>
                     </div>
                     <div className="flex items-center justify-between flex-wrap gap-5">
                         {/*add tags*/}
                         <div className="flex items-center gap-3">
                             {currentProject.tags.map((tag, index) => (
                                 <div key={index} className="tech-logo">
-                                    <img src={tag.path} alt={tag.name}/>
-
+                                    <img src={tag.path} alt={tag.name} />
                                 </div>
                             ))}
                         </div>
                         {/*Add Link to live site*/}
-                        <a className="flex items-center gap-2 cursor-pointer text-white-600" href={currentProject.href}
-                           target="_blank" rel="noreferrer">
+                        <a className="flex items-center gap-2 cursor-pointer text-white-600"
+                           href={currentProject.href}
+                           target="_blank"
+                           rel="noreferrer">
                             <p>Check Live Site</p>
-                            <img src="/assets/arrow-up.png" className="w-3 h-3" alt="arrow"/>
+                            <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
                         </a>
                     </div>
                     <div className="flex justify-between items-center mt-7">
@@ -71,4 +73,4 @@ const Projects = () => {
         </section>
     )
 }
-export default Projects
+export default Projects;

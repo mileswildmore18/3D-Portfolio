@@ -46,6 +46,7 @@ export const myProjects = [
     {
         title: 'Apple',
         desc: 'This is the Apple website showing the features of an Apple iPhone and new products out.',
+        subdesc: 'Built with React, Tailwind, Next.js and Framer Motion',
         href: 'https://animationmiles.netlify.app/',
         texture: '/textures/project/project1.mp4',
         logo: '/assets/apple.png',
@@ -81,9 +82,10 @@ export const myProjects = [
     {
         title: 'Brainwave',
         desc: 'This is a website where you can explore the possibilities of AI Chatting as well as seeing some amazing animation of the website.',
+        subdesc: 'Built with React, Tailwind, Next.js and Framer Motion.',
         href: 'https://milesbrainwave.netlify.app/',
         texture: '/textures/project/project2.mp4',
-        logo: '/assets/project-logo2.png',
+        logo: '/assets/ai.png',
         logoStyle: {
             backgroundColor: '#13202F',
             border: '0.2px solid #17293E',
