@@ -1,4 +1,5 @@
-import React, {useRef, useState} from 'react'
+import {useRef, useState} from 'react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
     // Add form
@@ -12,10 +13,37 @@ const Contact = () => {
         email: '',
         message: '',
     })
-
-    const handleChange = () => {
+    // Add reusable function for the contact form
+    const handleChange = ({target: {name, value}}) => {
+        setForm({...form, [name]: value})
     }
-    const handleSubmit = () => {
+    // Add form submission
+    const handleSubmit = async (e) => {
+        // prevent page reload
+        e.preventDefault();
+        // set loading
+        setLoading(true);
+
+        try {
+            // send email through emailjs
+           await emailjs.send('service_1e4bdry', 'template_d6b7hmp', {
+                from_name: form.name,
+                to_name: 'Miles Wildmore',
+                from_email: form.email,
+                to_email: 'mileswildmore18@gmail.com',
+                message: form.message
+            })
+            // reset form
+            setLoading(false);
+           //  alert the user
+           alert('Your message has been sent')
+        // reset form and check if error occured
+        } catch (error) {
+            setLoading(false);
+
+            console.log(error);
+            alert('Something went wrong!')
+        }
     }
     return (
         // contact section
@@ -76,7 +104,7 @@ const Contact = () => {
                         {/* Add submit button*/}
                         <button className="field-btn" type="submit" disabled={loading}>
                             {loading ? 'Sending...' : 'Send message'}
-                            <img  src="/assets/arrow-up.png" alt="arrow-up" className="field-btn_arrow"/>
+                            <img src="/assets/arrow-up.png" alt="arrow-up" className="field-btn_arrow"/>
                         </button>
                     </form>
                 </div>
