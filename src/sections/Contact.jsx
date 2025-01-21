@@ -39,6 +39,12 @@ const Contact = () => {
             setLoading(false);
            //  alert the user
            alert('Your message has been sent')
+            // reset and clear form
+            setForm({
+                name: '',
+                email: '',
+                message: ''
+            })
         // reset form and check if error occured
         } catch (error) {
             setLoading(false);
