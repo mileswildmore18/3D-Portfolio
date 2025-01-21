@@ -26,13 +26,15 @@ const Contact = () => {
 
         try {
             // send email through emailjs
-           await emailjs.send('service_1e4bdry', 'template_d6b7hmp', {
+           await emailjs.send('service_1e4bdry', 'template_s617b5f', {
                 from_name: form.name,
                 to_name: 'Miles Wildmore',
                 from_email: form.email,
                 to_email: 'mileswildmore18@gmail.com',
                 message: form.message
-            })
+            },
+               '9ulb7UmTP61WpoT8o'
+           )
             // reset form
             setLoading(false);
            //  alert the user
