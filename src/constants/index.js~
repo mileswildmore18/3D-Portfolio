@@ -27,7 +27,7 @@ export const clientReviews = [
         id: 1,
         name: 'Nicholas Cawein',
         position: 'CEO at Cloud Nexus IT Solution',
-        img: 'assets/Nicholas.jpg',
+        img: 'assets/CloudNexusSolutions_CEO.jpg',
         review:
             'Working with Miles was a fantastic experience. He was a pleasure to work with. Added content for our website to make it more user-friendly. Has potential to grow. Highly recommend him for any web dev projects.',
     },
