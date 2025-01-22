@@ -55,7 +55,7 @@ const Contact = () => {
     }
     return (
         // contact section
-        <section className="c-space my-20" id="contact">
+        <section className="c-space my-20">
             {/* Add terminal background */}
             <div className="relative min-h-screen flex items-center justify-center flex-col">
                 <img src="/assets/terminal.png" alt="terminal background" className="absolute inset-0 min-h-screen"/>

@@ -5,7 +5,7 @@ const Clients = () => {
         <section className="c-space my-20">
             <h3 className="head-text">Hear from My Clients
                 <div className="client-container">
-                    {clientReviews.map(({id, name, review, img, position}) =>(
+                    {clientReviews.map(({id, name, review, img, position}) => (
                         <div key={id} className="client-review">
                             <div>
                                 <p className="text-white font-light">{review}</p>
@@ -18,7 +18,7 @@ const Clients = () => {
                                         </div>
                                     </div>
                                     <div className="flex self-end items-center gap-2">
-                                        {Array.from({ length: 5}).map((_, index) => (
+                                        {Array.from({length: 5}).map((_, index) => (
                                             <img key={index} src="/assets/star.png" alt="star" className="w-5 h-5"/>
                                         ))}
                                     </div>
