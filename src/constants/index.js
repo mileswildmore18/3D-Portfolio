@@ -21,7 +21,7 @@ export const navLinks = [
         href: '#contact',
     },
 ];
-
+// Add client reviews
 export const clientReviews = [
     {
         id: 1,
@@ -242,33 +242,24 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
         targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
     };
 };
-
+// Add work experience
 export const workExperiences = [
     {
         id: 1,
-        name: 'Framer',
-        pos: 'Lead Web Developer',
-        duration: '2022 - Present',
-        title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
+        name: 'Cloud Nexus IT Solution',
+        pos: 'Entry Front End Web Developer Internship',
+        duration: 'August 2024 - January 2025',
+        title: "Building a new website off the ground based on the client's requirements and design specifications. This involved creating the website's structure, layout, and content, ensuring that it met the client's needs and met the client's requirements.",
         icon: '/assets/framer.svg',
         animation: 'victory',
     },
     {
         id: 2,
-        name: 'Figma',
-        pos: 'Web Developer',
-        duration: '2020 - 2022',
-        title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
+        name: 'Independent',
+        pos: 'FrontEnd Web Developer',
+        duration: 'June 2024 - present',
+        title: "Building websites from scratch to showcase my experience and show that I have potential to grow after graduating from UCF Coding Bootcamp",
         icon: '/assets/figma.svg',
         animation: 'clapping',
-    },
-    {
-        id: 3,
-        name: 'Notion',
-        pos: 'Junior Web Developer',
-        duration: '2019 - 2020',
-        title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-        icon: '/assets/notion.svg',
-        animation: 'salute',
     },
 ];
