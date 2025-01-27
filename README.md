@@ -34,7 +34,7 @@ npm install @react-three/eslint-plugin
 
 
 ## Usage
-You can use the "Node.js" terminal to check out Apple, and checkout information about what amazing new Apple products are up for sale.
+You can use the "Node.js" terminal to check out my portfolio, and checkout information about what I have to offer.
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
