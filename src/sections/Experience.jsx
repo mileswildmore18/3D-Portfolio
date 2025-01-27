@@ -1,4 +1,4 @@
-import React, {Suspense} from 'react'
+import {Suspense} from 'react'
 import {Canvas} from "@react-three/fiber";
 import {workExperiences} from "../constants/index.js";
 import {OrbitControls} from "@react-three/drei";
@@ -7,9 +7,9 @@ import Developer from "../components/Developer.jsx";
 
 const Experience = () => {
     return (
-        <section class="c-space my-20">
-            <div class="w-full text-white-600">
-                <h3 class="head-text">
+        <section className="c-space my-20" id="work">
+            <div className="w-full text-white-600">
+                <h3 className="head-text">
                 My Work Experience
                 </h3>
 
@@ -27,7 +27,7 @@ const Experience = () => {
                         {/* Add canvas loader for the avatar*/}
                         <Suspense fallback={<CanvasLoader />}>
                         {/*    Add avatar    */}
-                            <Developer position-y={-3}/>
+                            <Developer position-y={-3} scale={3}/>
                         </Suspense>
                     </Canvas>
                     </div>
