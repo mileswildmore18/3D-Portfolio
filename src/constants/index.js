@@ -244,22 +244,23 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 };
 // Add work experience
 export const workExperiences = [
+
     {
         id: 1,
-        name: 'Cloud Nexus IT Solution',
-        pos: 'Entry Front End Web Developer Internship',
-        duration: 'August 2024 - January 2025',
-        title: "Building a new website off the ground based on the client's requirements and design specifications. This involved creating the website's structure, layout, and content, ensuring that it met the client's needs and met the client's requirements.",
-        icon: '/assets/framer.svg',
-        animation: 'victory',
-    },
-    {
-        id: 2,
         name: 'Independent',
         pos: 'FrontEnd Web Developer',
         duration: 'June 2024 - present',
         title: "Building websites from scratch to showcase my experience and show that I have potential to grow after graduating from UCF Coding Bootcamp",
         icon: '/assets/figma.svg',
         animation: 'clapping',
+    },
+    {
+        id: 2,
+        name: 'Cloud Nexus IT Solution',
+        pos: 'Entry Front End Web Developer Internship',
+        duration: 'August 2024 - January 2025',
+        title: "Building a new website off the ground based on the client's requirements and design specifications. This involved creating the website's structure, layout, and content, ensuring that it met the client's needs and met the client's requirements.",
+        icon: '/assets/framer.svg',
+        animation: 'victory',
     },
 ];

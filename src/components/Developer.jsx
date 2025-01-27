@@ -23,7 +23,7 @@ const Developer = ({animationName = 'idle', ...props}) => {
     victoryAnimation[0].name = 'victory';
 
     // Add animations in array to the model
-    const {actions} = useAnimations([idleAnimation[0]], group)
+    const {actions} = useAnimations([idleAnimation[0], saluteAnimation[0], clappingAnimation[0], victoryAnimation[0]], group)
 
     // Add new animation to the model
     useEffect(() => {
