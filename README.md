@@ -45,7 +45,7 @@ All the contributions to this project is all done by Miles Wildmore.
 
 ## Tests
 
-To test out Brainwave, you will need to run the server by typing this in the terminal and open the localhost from the root directory with this command:
+To test out my portfolio, you will need to run the server by typing this in the terminal and open the localhost from the root directory with this command:
 ```
 npm run dev
 
