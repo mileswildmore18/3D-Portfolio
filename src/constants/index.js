@@ -122,7 +122,7 @@ export const myProjects = [
             'https://xoramiles.netlify.app/',
         href: 'https://xoramiles.netlify.app/',
         texture: '/textures/project/project3.mp4',
-        logo: '/assets/project-logo3.png',
+        logo: '/assets/xora.svg',
         logoStyle: {
             backgroundColor: '#60f5a1',
             background:
